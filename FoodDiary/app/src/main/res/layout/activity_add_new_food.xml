@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewFood">
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:hint="NAME"
+        android:id="@+id/Name"
+        android:gravity="center" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Name"
+        android:layout_marginTop="20dp"
+        android:hint="PROTEIN IN 100g"
+        android:id="@+id/Proteinin100"
+        android:gravity="center" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="KCAL IN 100g"
+        android:layout_marginTop="20dp"
+        android:id="@+id/Kcal100"
+        android:layout_below="@id/Proteinin100"
+        android:gravity="center" />
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Kcal100"
+        android:layout_marginTop="10dp"
+        android:id="@+id/relimg"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/img"/>
+
+
+        </androidx.cardview.widget.CardView>
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="10dp"
+            android:text="SET IMAGE"
+            android:onClick="change"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/Submit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/typegroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/green2"
+        android:text="SUBMIT"
+        android:onClick="InsertDB2"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Type of food"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/relimg"
+        android:id="@+id/Text"
+        android:layout_marginTop="10dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/typegroup"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_below="@id/Text"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="360dp"
+                android:layout_height="160dp"
+                android:layout_centerHorizontal="true">
+
+
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:id="@+id/relown"
+            >
+
+            <RadioButton
+                android:id="@+id/own"
+                android:layout_width="30dp"
+                android:layout_centerInParent="true"
+                android:layout_height="30dp"
+                android:tag="0"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Own"
+                android:layout_above="@id/own"
+                android:textSize="20sp"
+                android:gravity="center"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@id/relown"
+            android:id="@+id/relfruits"
+            >
+
+            <RadioButton
+                android:id="@+id/fruits"
+                android:layout_width="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="30dp"
+                android:tag="1"
+                android:layout_centerInParent="true"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fruit"
+                android:layout_above="@id/fruits"
+                android:textSize="20sp"
+                android:gravity="center"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@id/relfruits"
+            android:id="@+id/relveg"
+            >
+
+            <RadioButton
+                android:id="@+id/vegetable"
+                android:layout_width="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="30dp"
+                android:tag="2"
+                android:layout_centerInParent="true"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vegetable"
+                android:layout_above="@id/vegetable"
+                android:textSize="20sp"
+                android:gravity="center"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@id/relveg"
+            android:id="@+id/relmeat"
+            >
+
+            <RadioButton
+                android:id="@+id/meat"
+                android:layout_width="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="30dp"
+                android:tag="3"
+                android:layout_centerInParent="true"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Meat"
+                android:layout_above="@id/meat"
+                android:textSize="20sp"
+                android:gravity="center"
+                />
+
+        </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="270dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true">
+        <RelativeLayout
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:id="@+id/reldair"
+
+            >
+
+            <RadioButton
+                android:id="@+id/dairy"
+                android:layout_width="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_height="30dp"
+                android:tag="4"
+                android:layout_centerInParent="true"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dairy"
+                android:layout_above="@id/dairy"
+                android:textSize="20sp"
+                android:gravity="center"
+                />
+        </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="90dp"
+                    android:layout_height="80dp"
+                    android:layout_toRightOf="@id/reldair"
+                    android:id="@+id/relbread"
+
+
+                    >
+
+                    <RadioButton
+                        android:id="@+id/Bread"
+                        android:layout_width="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="30dp"
+                        android:tag="5"
+                        android:layout_centerInParent="true"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Bread"
+                        android:layout_above="@id/Bread"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="90dp"
+                    android:layout_height="80dp"
+                    android:layout_toRightOf="@id/relbread"
+
+                    >
+
+                    <RadioButton
+                        android:id="@+id/Other"
+                        android:layout_width="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="30dp"
+                        android:tag="6"
+                        android:layout_centerInParent="true"
+
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Other"
+                        android:layout_above="@id/Other"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        />
+                </RelativeLayout>
+                </RelativeLayout>
+        </RelativeLayout>
+        </RelativeLayout>
+
+
+
+    </RadioGroup>
+
+
+</RelativeLayout>

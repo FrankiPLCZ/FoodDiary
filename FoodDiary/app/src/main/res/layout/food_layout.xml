@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.cardview.widget.CardView
+        android:layout_height="120dp"
+        android:id="@+id/foodlay"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_width="120dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imago"
+            android:background="@null"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+

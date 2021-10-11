@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+<androidx.cardview.widget.CardView
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    app:cardCornerRadius="30dp"
+    >
+                <RelativeLayout 
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent" >
+                        
+                
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/img"
+                    android:background="@drawable/image_banana"/>
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_toRightOf="@id/img"
+                    android:background="#EAECEA"
+                    >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:id="@+id/namex"
+                            >
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="BANANA"
+                                    android:id="@+id/namaewa"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="25sp"
+                                    android:gravity="center"/>
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:id="@+id/proteinx"
+                            android:layout_below="@id/namex"
+                            >
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/icon_protein"
+                                    />
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="50dp"
+                                    android:text="00"
+                                    android:id="@+id/pam"
+                                    android:textSize="35sp"
+                                    android:layout_alignParentRight="true"
+                                    android:gravity="center"
+                                    />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/proteinx"
+                            >
+                                <ImageView
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:background="@drawable/icon_energy"
+                                    />
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="50dp"
+                                    android:text="00"
+                                    android:textSize="35sp"
+                                    android:id="@+id/kcalam"
+                                    android:layout_alignParentRight="true"
+                                    android:gravity="center"
+                                    />
+                        </RelativeLayout>
+
+                </RelativeLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_alignParentBottom="true"
+                            >
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    app:cardCornerRadius="50dp"
+                                    android:id="@+id/amount"
+                                    android:layout_marginTop="10dp"
+                                    >
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+                                        <EditText
+                                            android:id="@+id/amountnumber"
+                                            style="@style/Widget.MaterialComponents.TimePicker.Display.TextInputEditText"
+                                            android:layout_width="150dp"
+                                            android:gravity="center"
+                                            android:layout_height="match_parent"
+                                            android:textSize="30sp"
+                                            android:text=""
+                                            android:maxLength="1000000"
+                                            android:hint="grams"
+                                            android:layout_centerHorizontal="true"
+                                            android:inputType="numberDecimal" />
+                                                <RelativeLayout
+                                                    android:layout_width="75dp"
+                                                    android:layout_height="match_parent">
+                                                <Button
+                                                    android:layout_width="50dp"
+                                                    android:layout_centerInParent="true"
+                                                    android:layout_height="match_parent"
+                                                    android:background="@drawable/ic_baseline_add_24"/>
+                                                </RelativeLayout>
+                                                <RelativeLayout
+                                                    android:layout_width="75dp"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_alignParentRight="true">
+                                                        <Button
+                                                            android:layout_width="50dp"
+                                                            android:layout_centerInParent="true"
+                                                            android:layout_height="match_parent"
+                                                            android:background="@drawable/ic_baseline_remove_24"/>
+                                                </RelativeLayout>
+
+
+                                        </RelativeLayout>
+
+                                </androidx.cardview.widget.CardView>
+<RelativeLayout
+    android:layout_height="75dp"
+    android:layout_width="match_parent"
+    android:layout_alignParentBottom="true"
+    >
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@color/green2">
+        <ImageButton
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_eat"
+            android:id="@+id/eatbtn"
+            android:background="@null"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@color/teal_200"
+            android:layout_alignParentRight="true">
+
+                <ImageButton
+                    android:layout_width="150dp"
+                    android:id="@+id/cookbtn"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_cook"
+                    android:background="@null"/>
+        </RelativeLayout>
+
+</RelativeLayout>
+
+                        </RelativeLayout>
+                </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>

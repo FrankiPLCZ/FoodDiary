@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataInsertion">
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:hint="NAME"
+        android:id="@+id/Name"
+        android:gravity="center" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Name"
+        android:layout_marginTop="20dp"
+        android:hint="WEIGHT"
+        android:id="@+id/Weight"
+        android:gravity="center" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="AGE"
+        android:layout_marginTop="20dp"
+        android:id="@+id/Age"
+        android:layout_below="@id/Weight"
+        android:gravity="center" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="HEIGHT"
+        android:layout_below="@id/Age"
+        android:layout_marginTop="20dp"
+        android:id="@+id/Height"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/Submit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/group"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/green2"
+        android:text="SUBMIT"
+        android:onClick="InsertDB"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Activity level"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Height"
+        android:id="@+id/Text"
+        android:layout_marginTop="20dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/Text">
+
+        <RadioButton
+            android:id="@+id/Sedentary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="1.2"
+            android:text="little or no exercise" />
+
+        <RadioButton
+            android:id="@+id/Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="1.375"
+            android:text="light exercise/sports 1-3 days/week" />
+        <RadioButton
+            android:id="@+id/Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="1.55"
+            android:text="moderate exercise/sports 3-5 days/week" />
+        <RadioButton
+            android:id="@+id/Active"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="1.725"
+            android:text="hard exercise/sports 6-7 days a week" />
+        <RadioButton
+            android:id="@+id/SuperActive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="1.9"
+            android:text="very hard exercise/sports and a physical job" />
+    </RadioGroup>
+    <RadioGroup
+        android:id="@+id/groupsexhehe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        >
+        <RadioButton
+            android:id="@+id/Male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+        <RadioButton
+            android:id="@+id/Female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+
+    </RadioGroup>
+
+
+</RelativeLayout>
